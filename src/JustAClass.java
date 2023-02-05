@@ -23,7 +23,16 @@ public class JustAClass {
      * @return
      */
     public int sumUpIt(int n){
-        return 0;
+        int sum = 0;
+
+        for(int i = n; i != 0;){
+            sum+=i;
+
+            if(i<0) i++;
+            else i--;
+        }
+
+        return sum;
     }
 
     /**
@@ -33,7 +42,20 @@ public class JustAClass {
      * @return
      */
     public int sumUpRek(int n){
-        return 0;
+        int sum = 0;
+
+        if(n != 0){
+            sum += n;
+
+            if(n>0){
+                sum += sumUpRek(n-1);
+            }else{
+                sum += sumUpRek(n+1);
+            }
+        }
+
+
+        return sum;
     }
 
     /**
@@ -43,7 +65,13 @@ public class JustAClass {
      * @return
      */
     public int sumUpRandomIt(int n){
-        return 0;
+        int sum = 0;
+
+        for(int i = 1; i <= n; i++){
+            sum += getRandom();
+        }
+
+        return sum;
     }
 
     /**
