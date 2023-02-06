@@ -2,7 +2,7 @@
  * Created by aos on 26.04.2017.
  * Updated by aos on 17.02.2021.
  */
-public class JustAClass {
+public class  JustAClass {
 
     //TODO: Arbeite die Methoden von oben nach unten ab. Teste immer über die Klasse MainProgramm, ob die Methode das gewünschte liefert.
     /**
@@ -81,6 +81,9 @@ public class JustAClass {
      * @return
      */
     public int sumUpRandomRek(int n){
+        if(n>0){
+            return getRandom() + sumUpRandomRek(n-1);
+        }
         return 0;
     }
 
@@ -91,7 +94,16 @@ public class JustAClass {
      * @return die größte zufällig Zahl, die im Verlauf der Methode erstellt wurde.
      */
     public int biggestOfRandomIt(int n){
-        return -1;
+        int biggest = 0;
+
+        for(int i = 1; i <= n; i++){
+            int rnd = getRandom();
+            if(rnd > biggest){
+                biggest = rnd;
+            }
+        }
+
+        return biggest;
     }
 
     /**
@@ -101,6 +113,10 @@ public class JustAClass {
      * @return die größte zufällig Zahl, die im Verlauf der Methode erstellt wurde.
      */
     public int biggestOfRandomRek(int n){
+        if(n>0){
+            int rnd = getRandom();
+            int biggest = rnd;
+        }
         return -1;
     }
 
